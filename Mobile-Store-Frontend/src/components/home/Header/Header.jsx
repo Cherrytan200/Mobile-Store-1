@@ -31,10 +31,13 @@ const Header = () => {
       <nav className="h-full px-4 max-w-container mx-auto relative">
         <Flex className="flex items-center justify-between h-full">
           <Link to="/">
-            <div>
-              Logo
-              {/* <Image className="w-20 object-cover" imgSrc={logo} /> */}
-            </div>
+          <div>
+            <img 
+              src='/logo.jpg' 
+              alt="Logo" 
+              className="h-[60px] w-[200px] sm:w-[250px] object-contain transition-all duration-300 hover:scale-105"
+            />
+          </div>
           </Link>
           <div>
             {showMenu && (

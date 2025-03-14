@@ -89,18 +89,20 @@ import Journal from "./pages/Journal/Journal.jsx";
 import Offer from "./pages/Offer/Offer.jsx";
 import ProductDetails from "./pages/ProductDetails/ProductDetails.jsx";
 import Cart from "./pages/Cart/Cart.jsx";
-import Payment from "./pages/payment/Payment.jsx";
+// import Payment from "./pages/payment/Payment.jsx";
 import SignUp from "./pages/Account/SignUp.jsx";
 import SignIn from "./pages/Account/SignIn.jsx";
 import Otp from "./pages/Account/Otp.jsx";
 
 import { Outlet } from "react-router-dom";
 import {ScrollRestoration} from "react-router-dom";
-import Footer from "./components/home/Footer/Footer";
-import FooterBottom from "./components/home/Footer/FooterBottom";
-import Header from "./components/home/Header/Header";
-import HeaderBottom from "./components/home/Header/HeaderBottom";
+import Footer from "./components/home/Footer/Footer.jsx";
+import FooterBottom from "./components/home/Footer/FooterBottom.jsx";
+import Header from "./components/home/Header/Header.jsx";
+import HeaderBottom from "./components/home/Header/HeaderBottom.jsx";
 import SpecialCase from "./components/SpecialCase/SpecialCase.jsx";
+import Shipping from "./pages/shipping/Shipping.jsx";
+import Payment from "./pages/payment/Payment.jsx";
 
 const Layout = () => {
   return (
@@ -122,18 +124,19 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="shop" element={<Shop />} />
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="journal" element={<Journal />} />
-        <Route path="offer" element={<Offer />} />
-        <Route path="product/:_id" element={<ProductDetails />} />
-        <Route path="cart" element={<Cart />} />
-        <Route path="paymentgateway" element={<Payment />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/journal" element={<Journal />} />
+        <Route path="/offer" element={<Offer />} />
+        <Route path="/product/:_id" element={<ProductDetails />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/paymentgateway" element={<Shipping />} />
+        <Route path='/payment' element={<Payment/>}/>
       </Route>
-      <Route path="signup" element={<SignUp />} />
-      <Route path="signin" element={<SignIn />} />
-      <Route path="otp" element={<Otp />} />
+      <Route path="/signup" element={<SignUp />} />
+      <Route path="/signin" element={<SignIn />} />
+      <Route path="/otp" element={<Otp />} />
     </Routes>
   );
 }
